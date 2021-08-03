@@ -7,7 +7,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: data
+      data: data,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -38,7 +38,7 @@ export default class App extends Component {
     return (
       <div className="container">
         <form className="form">
-          <h3>{this.state.data.questions[0].title}</h3>
+          <h3 role="question1">{this.state.data.questions[0].title}</h3>
           <ul>
             {this.state.data.questions[0].fields.map((item) => {
               return (
@@ -54,7 +54,7 @@ export default class App extends Component {
               );
             })}
           </ul>
-          <h3>{this.state.data.questions[1].title}</h3>
+          <h3 role="question2">{this.state.data.questions[1].title}</h3>
           <ul>
             {this.state.data.questions[1].fields.map((item) => {
               if (item.type === "text") {
@@ -87,8 +87,11 @@ export default class App extends Component {
           </ul>
           <div>
             <button className="btn btn-primary" onClick={(e) => this.log(e)}>
-              Console Log
+						submit
             </button>
+						<footer className="footer" role="log">
+							<p>Open your browser console to view logs</p>
+						</footer>
           </div>
         </form>
       </div>

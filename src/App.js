@@ -46,7 +46,7 @@ export default class App extends Component {
                 } else {
                   return (
                     <select name={item.name}>
-                      <option>Select..</option>
+                      <option>Select {item.name}..</option>
                       {item.options.map((opt) => {
                         return (
                           <option key={opt} value={opt}>

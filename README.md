@@ -1,6 +1,10 @@
 # dynamic-form
 Created with CodeSandbox
 
+View the [Live demo](https://form-dynamic.netlify.app/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/434d34be-a9c7-47cd-8ce3-f55ccd50ad3b/deploy-status)](https://app.netlify.com/sites/form-dynamic/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:

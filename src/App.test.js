@@ -18,7 +18,7 @@ test("loads country options from data.json", () => {
 // Unit tests
 test("check form question(s) defined", () => {
   render(<App />);
-  fireEvent.click(screen.getByText(/submit/i));
+  fireEvent.click(screen.getByText(/log results/i));
   const q1 = screen.getByText(/Tell us about yourself/i);
   const q2 = screen.getByText(/Where do you live?/i);
   expect(q1).toBeDefined();

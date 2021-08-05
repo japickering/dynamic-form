@@ -42,6 +42,7 @@ button, .btn-primary {
   border-radius: 0.5rem;
   color: #fff;
 	cursor: pointer;
+	text-transform: capitalize;
 }
 
 .container {

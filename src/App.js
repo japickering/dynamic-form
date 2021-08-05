@@ -92,7 +92,7 @@ export default class App extends Component {
           </div>
           <div>
             <button className="btn btn-primary" onClick={(e) => this.log(e)}>
-              submit
+							log results
             </button>
             <footer className="footer" role="log">
               <p>Open your browser console to view logs</p>

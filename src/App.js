@@ -7,7 +7,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: data,
+      data: data
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -39,10 +39,10 @@ export default class App extends Component {
       <div className="container">
         <form className="form">
           <h3>{this.state.data.questions[0].title}</h3>
-          <ul>
+          <div>
             {this.state.data.questions[0].fields.map((item) => {
               return (
-                <li key={item.label}>
+                <div className="row" key={item.label}>
                   <input
                     type="text"
                     name={item.name}
@@ -50,16 +50,16 @@ export default class App extends Component {
                     value={this.state[item.name]}
                     onChange={this.handleChange}
                   />
-                </li>
+                </div>
               );
             })}
-          </ul>
+          </div>
           <h3>{this.state.data.questions[1].title}</h3>
-          <ul>
+          <div>
             {this.state.data.questions[1].fields.map((item) => {
               if (item.type === "text") {
                 return (
-                  <li key={item.name}>
+                  <div className="row" key={item.name}>
                     <input
                       type="text"
                       name={item.name}
@@ -67,31 +67,36 @@ export default class App extends Component {
                       value={this.state[item.name]}
                       onChange={this.handleChange}
                     />
-                  </li>
+                  </div>
                 );
               } else {
                 return (
-                  <select name={item.name} onChange={this.handleDropdownChange}>
-                    <option>Select {item.name}..</option>
-                    {item.options.map((opt) => {
-                      return (
-                        <option key={opt} value={this.state[opt]}>
-                          {opt}
-                        </option>
-                      );
-                    })}
-                  </select>
+                  <div className="row" key={item.name}>
+                    <select
+                      name={item.name}
+                      onChange={this.handleDropdownChange}
+                    >
+                      <option>Select {item.name}..</option>
+                      {item.options.map((opt) => {
+                        return (
+                          <option key={opt} value={this.state[opt]}>
+                            {opt}
+                          </option>
+                        );
+                      })}
+                    </select>
+                  </div>
                 );
               }
             })}
-          </ul>
+          </div>
           <div>
             <button className="btn btn-primary" onClick={(e) => this.log(e)}>
-						submit
+              submit
             </button>
-						<footer className="footer" role="log">
-							<p>Open your browser console to view logs</p>
-						</footer>
+            <footer className="footer" role="log">
+              <p>Open your browser console to view logs</p>
+            </footer>
           </div>
         </form>
       </div>

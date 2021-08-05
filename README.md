@@ -1,5 +1,9 @@
 # dynamic-form
-Created with CodeSandbox
+
+## The User Story
+This project was my solution to the 2nd part of the technical test for Shopworks to generate a dynamic form using sample JSON data they provided. This means that editing the JSON file can change the form fields and dropdowns to collect data for a range of purposes. Clicking the submit button logs the form's current state to the browser console. 
+
+Note: On a high traffic website or enterprise level app I would have form validation in there but that's out of scope for this coding challenge.
 
 View the [Live demo](https://form-dynamic.netlify.app/)
 
